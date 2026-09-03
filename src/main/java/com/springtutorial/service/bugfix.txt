@@ -3,3 +3,5 @@ first bug fixed..
 second bug fix
 
 third bug fix krdiya..
+
+fourth bug fixed using try catch block..
