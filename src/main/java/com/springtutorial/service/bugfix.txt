@@ -4,4 +4,6 @@ second bug fix
 
 third bug fix krdiya..
 
+fourth bug fixed using try catch block..
+
 fourth bug fixed: " infinte loop error"..
