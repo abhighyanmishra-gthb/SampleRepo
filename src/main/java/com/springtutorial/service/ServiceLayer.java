@@ -13,7 +13,7 @@ public class ServiceLayer {
     @Autowired
     private RepositoryEmp repositoryEmp;
 
-    public Employee savedata(Employee emp)
+    public Employee saveData(Employee emp)
     {
         return repositoryEmp.save(emp);
     }

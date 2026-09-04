@@ -3,7 +3,7 @@ package com.springtutorial.controller;
 import com.springtutorial.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.springtutorial.service.ServiceLayer;
@@ -28,24 +28,24 @@ public class RestControllerEmp {
             return ResponseEntity.status(HttpStatus.CONFLICT)
                     .body("Employee id  already existed");
         }
-        Employee savedEmp = serviceLayer.savedata(emp);
+        Employee savedEmp = serviceLayer.saveData(emp);
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body("Created..");
+                .body("Employee Data Created..");
 
     }
 
-    @GetMapping("/employee")
+    @GetMapping("/allemployee")
     public List<Employee> getEmployees()
     {
         return serviceLayer.getAllEmployees();
     }
 
-    @PutMapping("/employee")
+    @PutMapping("/updateemployee")
     public Employee updateEmployee(@RequestBody Employee emp)
     {
-        return serviceLayer.savedata(emp);
+        return serviceLayer.saveData(emp);
     }
 
     @DeleteMapping("/employee/{id}")
